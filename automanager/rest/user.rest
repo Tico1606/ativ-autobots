@@ -1,0 +1,108 @@
+### Criar usuário
+POST http://localhost:8080/user/create
+Content-Type: application/json
+
+{
+  "name": "Maria Oliveira",
+  "socialName": "Maria Oliveira",
+  "role": "GERENTE",
+  "inactive": false,
+  "lastAccess": "2025-06-30",
+  "company": {
+    "id": 1
+  },
+  "address": {
+    "state": "RJ",
+    "city": "Rio de Janeiro",
+    "district": "Copacabana",
+    "street": "Avenida Atlântica",
+    "number": "789",
+    "postalCode": "22010-000",
+    "additionalInfo": "Cobertura 301"
+  },
+  "documents": [
+    {
+      "type": "CPF",
+      "issueDate": "2020-01-01",
+      "number": "98765432100"
+    }
+  ],
+  "phones": [
+    {
+      "areaCode": "21",
+      "number": "98888-7777"
+    }
+  ],
+  "emails": [
+    {
+      "email": "maria@empresa.com"
+    }
+  ],
+  "credentialUserPassword": {
+    "username": "maria@empresa.com",
+    "password": "senha456"
+  }
+}
+
+###
+
+### Listar usuários
+GET http://localhost:8080/user/list
+
+###
+
+### Buscar usuário por ID
+GET http://localhost:8080/user/1
+
+###
+
+### Atualizar usuário
+PUT http://localhost:8080/user/update/1
+Content-Type: application/json
+
+{
+  "name": "Maria Lima",
+  "socialName": "Maria Lima",
+  "role": "GERENTE",
+  "inactive": false,
+  "lastAccess": "2025-06-30",
+  "company": {
+    "id": 1
+  },
+  "address": {
+    "state": "RJ",
+    "city": "Rio de Janeiro",
+    "district": "Copacabana",
+    "street": "Avenida Floresta Atlântica",
+    "number": "345",
+    "postalCode": "22010-000",
+    "additionalInfo": "Cobertura 301"
+  },
+  "documents": [
+    {
+      "type": "CPF",
+      "issueDate": "2020-01-01",
+      "number": "98765432100"
+    }
+  ],
+  "phones": [
+    {
+      "areaCode": "21",
+      "number": "98888-7777"
+    }
+  ],
+  "emails": [
+    {
+      "email": "maria@empresa.com"
+    }
+  ],
+  "credentialUserPassword": {
+    "username": "maria@empresa.com",
+    "password": "senha456"
+  }
+}
+
+###
+
+### Deletar usuário
+DELETE http://localhost:8080/user/delete/1

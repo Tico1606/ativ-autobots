@@ -1,0 +1,8 @@
+### 📌 Logar como Admin
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "email": "admin@admin.com",
+  "password": "admin123"
+}
